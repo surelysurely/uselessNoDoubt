@@ -19,8 +19,9 @@ cin>>emri;
 cout<<"numri i medaleve: ";
 cin>>numriMedaljeve;
 for(int i = 0;i<n;i++){
-cout<<“koha  “<< i+1<<": ";
+cout<<"koha  "<< i+1<<": ";
 cin>>kohet[i];
+}
 }
 int& Atleti::merr_numriMedaljeve(){
 int& referenc = numriMedaljeve;
@@ -35,10 +36,10 @@ maksimumi= &kohet[i];
 return maksimumi;
 }
 int Atleti::diferenca_kohore(){
-int max=koha[0];
+int max=kohet[0];
 double shuma=0;
 for(int i=0;i<n;i++){
-if(koha[i]>max)
+if(kohet[i]>max)
 max=kohet[i];
 shuma+=kohet[i];
 }
