@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -13,13 +14,13 @@ int* max_ptr();
 int diferenca_kohore();
 };
 Atleti::Atleti(){
-cout<<“sheno emrin: “;
+cout<<"sheno emrin: ";
 cin>>emri;
-cour<<numri i medaleve: “;
+cout<<"numri i medaleve: ";
 cin>>numriMedaljeve;
 for(int i = 0;i<n;i++){
-cout<<“koha  “<< i+1<<“: “;
-cin>>koha[i];
+cout<<“koha  “<< i+1<<": ";
+cin>>kohet[i];
 }
 int& Atleti::merr_numriMedaljeve(){
 int& referenc = numriMedaljeve;
@@ -29,7 +30,7 @@ int* Atleti::max_ptr(){
 int* maksimumi = kohet;
 for(int i=1;i<n;i++){
 if(kohet[i]>*maksimumi)
-maksimumi= kohet[i];
+maksimumi= &kohet[i];
 }
 return maksimumi;
 }
@@ -38,8 +39,8 @@ int max=koha[0];
 double shuma=0;
 for(int i=0;i<n;i++){
 if(koha[i]>max)
-max=koha[i];
-shuma+=koha[i];
+max=kohet[i];
+shuma+=kohet[i];
 }
 double mesatarja = shuma/n;
 return max-mesatarja;
@@ -47,12 +48,12 @@ return max-mesatarja;
 int main(){
 Atleti obj1;
 int& numriMedaljeve= obj1.merr_numriMedaljeve();
-int* kohaMaks = obj1.max_ptr()
+int* kohaMaks = obj1.max_ptr();
 double diferencaKohore = obj1.diferenca_kohore();
-cout<<“\nNumri i Medaljeve te fituara: “<<numriMedaljeve;
+cout<<"\nNumri i Medaljeve te fituara: "<<numriMedaljeve;
 cout<<"\nKoha maksimale: "<<*kohaMaks;
 cout<<"\nDiferenca kohore mes kohes maksimale dhe meaatares eshte: "<<diferencaKohore;
-cout<<“\n\n";
-system(“pause”);
+cout<<"\n\n";
+system("pause");
 return 0;
 }
