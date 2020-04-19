@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+using namespace std;
+const int n=6;
+class Atleti{
+string emri;
+int numriMedaljeve;
+int kohet[n];
+public:
+Atleti();
+int& merr_numriMedaljeve();
+int* max_ptr();
+int diferenca_kohore();
+};
+Atleti::Atleti(){
+cout<<“sheno emrin: “;
+cin>>emri;
+cour<<numri i medaleve: “;
+cin>>numriMedaljeve;
+for(int i = 0;i<n;i++){
+cout<<“koha  “<< i+1<<“: “;
+cin>>koha[i];
+}
+int& Atleti::merr_numriMedaljeve(){
+int& referenc = numriMedaljeve;
+return numriMedaljeve;
+}
+int* Atleti::max_ptr(){
+int* maksimumi = kohet;
+for(int i=1;i<n;i++){
+if(kohet[i]>*maksimumi)
+maksimumi= kohet[i];
+}
+return maksimumi;
+}
+int Atleti::diferenca_kohore(){
+int max=koha[0];
+double shuma=0;
+for(int i=0;i<n;i++){
+if(koha[i]>max)
+max=koha[i];
+shuma+=koha[i];
+}
+double mesatarja = shuma/n;
+return max-mesatarja;
+}
+int main(){
+Atleti obj1;
+int& numriMedaljeve= obj1.merr_numriMedaljeve();
+int* kohaMaks = obj1.max_ptr()
+double diferencaKohore = obj1.diferenca_kohore();
+cout<<“\nNumri i Medaljeve te fituara: “<<numriMedaljeve;
+cout<<"\nKoha maksimale: "<<*kohaMaks;
+cout<<"\nDiferenca kohore mes kohes maksimale dhe meaatares eshte: "<<diferencaKohore;
+cout<<“\n\n";
+system(“pause”);
+return 0;
+}
